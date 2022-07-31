@@ -3,20 +3,21 @@
     <head>  <!--Define o cabeçalho do documento com informações que não serão exibidas dentro do conteúdo da página-->
         <meta charset="utf-8">  <!--Serve para indicar o formato de codificação de caracteres utilizado no documento-->
         <title>Introdução a criação de websites com HTML5 e CSS3</title>    <!--Título que aparecerá na aba do navegador-->
+        <link rel="stylesheet" href="style.css">    <!--link sincroniza o css ao html,rel vai dizer qual tipo de arquivo, "stylesheet" é o tipo de arquivo-->
     </head>
     <body>  <!--Define o corpo do documento, ou seja, tudo que estiver dentro da tag body será o conteúdo da página-->
         <header>    <!--Header é um cabeçalho da página ou parte da página, um cabeçalho da section por exemplo-->
             <img height="100px" width="100px" src="assets/user-avatar.webp" alt="imagem de avatar de usuário">  <!--A tag img adiciona uma imagem, devemos usar o atributo src para inserir o caminho da imagem/link da imagem-->
-            <h1>Felipe Sousa</h1>   <!--H1 ao h6 são headings <h1>Título da página</h1> <h2>Título de seção</h2> <h3>Título de artigo</h3>-->
+            <h1 id="title">Felipe Sousa</h1>   <!--H1 ao h6 são headings <h1>Título da página</h1> <h2>Título de seção</h2> <h3>Título de artigo</h3>-->
         </header>
         <section>   <!--Section é uma seção genérica de conteúdo como uma lista de artigos por exemplo-->
             <header>    <!--Este cabeçalho por exemplo é referente à section-->
-                <h2>Posts</h2>
+                <h2 class="subtitle">Posts</h2>
             </header>
-            <article>   <!--Article é um conteudo relevante como um artigo de um blog-->
+            <article class="post">   <!--Article é um conteudo relevante como um artigo de um blog-->
                 <header>
-                    <h3>Post #1</h3>
-                    <img height="320px" width="760px" src="assets/web-code.jpg" alt="imagem de código em notebook">     <!--O termo height define altura e width largura e alt para definir o nome do conteúdo cotido na imagem para uma maior acessibilidade-->
+                    <h3 class="post_title">Post #1</h3>
+                    <img height="320px" width="760px" src="assets/web-code.jpg" alt="imagem de código em notebook">     <!--O termo height define altura e width largura e alt para descrever o conteúdo contido na imagem para uma maior acessibilidade-->
                 </header>
                 <p>      <!--<p>conteúdo do artigo<p>-->
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lacus eu dui dapibus aliquet accumsan eget ante. Proin eget consectetur dolor. Etiam eu ultricies mi. Proin nec augue at sem interdum luctus dapibus posuere ex. Aliquam eu justo molestie, posuere erat et, gravida tellus. Integer posuere orci sapien, in tincidunt orci tempus sed. Sed ac lectus malesuada, finibus augue non, interdum nulla. Aenean dictum dolor sit amet commodo condimentum. In hac habitasse platea dictumst. Ut nec feugiat leo, sed porttitor lectus. Sed condimentum odio ac nulla consequat, suscipit gravida mi mollis. Donec accumsan rutrum nulla, et fringilla neque condimentum vitae. Pellentesque condimentum arcu libero, sed volutpat velit sollicitudin ac. Nulla vestibulum at orci eu pretium. Duis lacinia porta nisl, ut laoreet nulla ornare mattis.
