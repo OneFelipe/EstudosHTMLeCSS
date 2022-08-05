@@ -2,31 +2,63 @@
 /*no HTML temos seletores de elementos como o id="valor", é representado por #id no css(o valor da id só pode ser usado uma vez por página), temos também class="valor" que é uma classe, é representada no css como .classe*/
 
 body {
-    background: grey;   /*background com valor da cor muda a cor de fundo do site*/
+    background-color: rgb(224, 222, 222);   /*background com valor da cor muda a cor de fundo do site
+    background: 008800; pode-se usar a propriedade reduzida com o código hexadecimal ou o nome da cor
+    background-image: url("bg.png"); esta propriedade serve para adicionar uma imagem ao fundo
+    background-position: top; esta propriedade serve para mudar a posição do fundo*/
+    font-family: Verdana;
+    max-width: 900px;   /*significa que o max é 900px, caso seja menor que isso, irá se ajustar com o tamanho da tela*/
+    margin: auto; /*serve para alinhar ao centro automaticamente e se ajustar de acordo com o tamanho da tela*/
+}
+
+.photo {
+    border: 2px solid black;
+    border-radius: 30px;
 }
 
 /*↘isso são seletores de elementos HTML↙*/
 #title, .subtitle, .post_title {    /*entre chaves vão ser as declarações que são formadas por uma propriedade e um valor*/
-    color: blueviolet;  /*color com valor da cor irá mudar a cor do elemento*/
+    color: rgb(22, 22, 22);  /*color com valor da cor irá mudar a cor do elemento*/
+}
+
+#title {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: underline;
+    color: rgb(35, 33, 33);
 }
 
 .post_title {
     font-size: 16px;    /*font-size com o valor de tamanho irá mudar o tamanho de fonte*/
     font-style: italic;     /*font-style serve para mudar estilo de fonte*/
-
+    margin: 0;
+    margin-bottom: 15px;
     /*font-family
     Com o font-family podemos alterar a fonte dos nossos textos, como uma fonte da internet ou uma que esteja instalada no nosso computador, mas vamos nos ater às fontes seguras, chamadas de web safe fonts.
+    É possivel colocar mais de uma fonte, para caso uma não funcionar, terá outra como backup
+
+    font-weight: bold; este elemento define o peso da fonte, o valor bold é usado como negrito
+    text-transform: caitalize; coloca todoas as primeiras letras de todas as palavras em maiuscula, também tem valores como: uppercase, para deixar todo o texto em maiusculo, lowercase, para deixar todo o texto em minuculo
+    
+    text-decoration: underline; serve para decorar o texto, temos valores como: underline, coloca uma linha abaixo da palavra, overline, colcoa uma linha acima, line-throungh, colcoa uma linha ao centro, cortando a palavra
 
     Essas fontes são chamadas assim pois são encontradas em quases todos os sistemas e podem ser usadas sem preocupação.*/
 }
 
 .post {
-    background: white;
-    padding: 10px;  /*O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele*/
+    background: rgb(195, 195, 195);
+    padding: 15px;  /*O padding é um espaçamento entre as bordas e o conteúdo, a diferença para as margens é que declarações de imagem de fundo funcionam nele*/
 
-    border: 3px solid black;    /*Borda do elemento*/
+    border: 3px solid black;    /*Borda do elemento
 
-    /*solid: mostra uma borda simples e reta;
+    pode-se definir a largura: pixels, centímetros, milímetros...
+    cor: blue, #0000ff...
+    estilo: solido, pontilhada, tracejada...
+
+    solid: mostra uma borda simples e reta;
     dotted: são bolinhas com um pequeno espaçamento entre elas;
     dashed: forma uma linha tracejada.
 
@@ -37,5 +69,36 @@ body {
     Border-radius
     E a última propriedade é o border-radius, ele permite arredondar os cantos de um elemento. Podemos usar várias unidades, mas as mais comuns são os pixels e a porcentagem.*/
 
-    margin: 10px;   /*Espaçamento entre elementos*/
+    margin-bottom: 15px;   /*Espaçamento entre elementos*/
+    border-radius: 7px;
 }
+
+/*list-style-type: square; muda a bolinha da lista não ordenada para um quadrado
+
+list-style-type: upper-roman; muda a lista ordeada para algarismo romano maiusculo
+
+list-style-type: "\1F44D"; também é possível usar emojis utilizar emojis com o código referente do mesmo
+
+list-style-image: url("imagem.png"); também é possível adicionar imagens usando a url*/
+
+.post_content {
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    text-align: justify;
+}
+
+.post_image {
+    margin-bottom: 15px;
+    width: 100%;    /*serve para ajustar a imagem de acordo com a caixa*/
+}
+
+.contacts_list {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+.contacts_list li a {
+    text-decoration: none;
+}
+
